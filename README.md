@@ -7,7 +7,7 @@ This project is a modern front-end web application built using **React**, **Mate
 ### 1. Clone the repo
 
 ```bash
-git clone [<your-repo-url>](https://github.com/pprathik07/Swapple-ABOUTUS)
+git clone (https://github.com/pprathik07/Swapple-ABOUTUS)
 cd Swapple-ABOUTUS
 2. Install dependencies
 
