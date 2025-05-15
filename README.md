@@ -2,28 +2,6 @@
 
 This project is a modern front-end web application built using **React**, **Material UI (MUI)**, and **Vite**. It follows a modular folder structure for better scalability and development speed.
 
-## 📁 Project Structure
-
-
-.
-├── public/ # Static assets
-├── src/
-│ ├── assets/ # Images and icons
-│ ├── components/ # Reusable components
-│ ├── App.jsx # Main app component
-│ ├── App.css # App styles
-│ ├── main.jsx # Entry point
-│ └── index.css # Global styles
-├── index.html # Vite HTML template
-├── vite.config.js # Vite configuration
-├── eslint.config.js # ESLint configuration
-├── package.json # Dependencies and scripts
-└── README.md # Documentation
-
-bash
-Copy
-Edit
-
 ## 🚀 Getting Started
 
 ### 1. Clone the repo
