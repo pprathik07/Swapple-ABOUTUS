@@ -2,7 +2,7 @@ import React from 'react';
 import { Box, Typography, Container, Paper } from '@mui/material';
 import { styled } from '@mui/material/styles';
 
-// Grab the images
+// i have inserted imgs in assets 
 import vectorHelp from '../assets/vectorhelp.png';
 import leadswapLogo from '../assets/leadswap.png';
 import arrowlogo from '../assets/arrow.png';
@@ -17,7 +17,7 @@ const MainWrapper = styled(Box)(({ theme }) => ({
   paddingBottom: theme.spacing(5)
 }));
 
-// That vertical text on the side
+// vertical aboutus 
 const SideText = styled(Box)(({ theme }) => ({
   position: 'fixed',
   right: 0,
@@ -62,7 +62,7 @@ const TopBar = styled(Box)(({ theme }) => ({
   width: '100%'
 }));
 
-// Section headers
+// Section 
 const SectionHead = styled(Typography)(({ theme }) => ({
   fontWeight: 'bold',
   borderBottom: '1px solid #ccc',
@@ -71,7 +71,7 @@ const SectionHead = styled(Typography)(({ theme }) => ({
   fontFamily: '"Bayon", sans-serif' // Need this font again
 }));
 
-// Content box - reused for different sections
+// Content box 
 const ContentBox = styled(Paper)(({ theme, bgColor = '#f2f2f0' }) => ({
   borderRadius: '16px',
   backgroundColor: bgColor,
@@ -87,13 +87,13 @@ const ContentBox = styled(Paper)(({ theme, bgColor = '#f2f2f0' }) => ({
 const AboutUs = () => {
   return (
     <MainWrapper>
-      {/* That vertical text thing on the side */}
+      {/* That vertical text*/}
       <SideText>
         <BigSideText>ABOUTUS</BigSideText>
       </SideText>
 
       <Container maxWidth="md" sx={{ pr: 6, position: 'relative', zIndex: 1 }}>
-        {/* Header at top */}
+        {/* Header of top*/}
         <TopBar>
           <Typography variant="h4" component="h1" sx={{ fontWeight: 'bold', color: '#333', fontSize: '2.2rem' }}>
             About us
@@ -108,7 +108,7 @@ const AboutUs = () => {
           </Box>
         </TopBar>
 
-        {/* Mission stuff */}
+        {/* Mission section as ui */}
         <ContentBox>
           <SectionHead variant="subtitle1">OUR MISSION</SectionHead>
           <Box sx={{
@@ -132,7 +132,7 @@ const AboutUs = () => {
               To empower businesses with AI-driven lead generation tools that are simple to use, consistently reliable, and built for real-world results—no fluff, no outdated databases, and no empty promises.
             </Typography>
 
-            {/* Arrow thingy */}
+            {/* Arrow png from ui*/}
             <Box sx={{
               position: { xs: 'relative', sm: 'absolute' },
               right: 30,
@@ -185,7 +185,7 @@ const AboutUs = () => {
           </Box>
         </ContentBox>
 
-        {/* Why LeadSwap */}
+        {/* Why LeadSwap and page components from ui */}
         <ContentBox>
           <SectionHead variant="subtitle1">WHY LEADSWAP AI?</SectionHead>
 
