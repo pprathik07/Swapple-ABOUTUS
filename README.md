@@ -7,17 +7,13 @@ This project is a modern front-end web application built using **React**, **Mate
 ### 1. Clone the repo
 
 ```bash
-git clone <your-repo-url>
-cd <project-folder>
+git clone [<your-repo-url>](https://github.com/pprathik07/Swapple-ABOUTUS)
+cd Swapple-ABOUTUS
 2. Install dependencies
-bash
-Copy
-Edit
+
 npm install
 3. Start development server
-bash
-Copy
-Edit
+
 npm run dev
 Visit: http://localhost:5173
 
@@ -28,12 +24,8 @@ Material UI (MUI)
 
 Vite
 
-ESLint
-
 📦 Scripts
-json
-Copy
-Edit
+
 {
   "scripts": {
     "dev": "vite",
