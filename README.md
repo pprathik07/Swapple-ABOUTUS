@@ -1,12 +1,46 @@
-# React + Vite
+🚀 React + MUI Project (Vite Setup)
+This project is a modern front-end web application built using React, Material UI (MUI), and Vite. It features component-based architecture with support for scalable asset management and efficient development using Vite.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+📁 Project Structure
+graphql
+Copy
+Edit
+.
+├── public/                 # Static assets
+├── src/
+│   ├── assets/            # Images and icons
+│   ├── components/        # Reusable components (e.g., Aboutus.jsx)
+│   ├── App.jsx            # Main app component
+│   ├── App.css            # App-level styles
+│   ├── main.jsx           # App entry point for Vite
+│   └── index.css          # Global styles
+├── index.html             # HTML template for Vite
+├── vite.config.js         # Vite configuration
+├── eslint.config.js       # ESLint setup
+├── package.json           # Project metadata & dependencies
+└── README.md              # Project documentation
+🚀 Getting Started
+1. Clone the repository
+bash
+Copy
+Edit
+git clone <your-repo-url>
+cd <project-folder>
+2. Install dependencies
+bash
+Copy
+Edit
+npm install
+3. Run the development server
+bash
+Copy
+Edit
+npm run dev
+This starts the Vite development server at http://localhost:5173.
 
-Currently, two official plugins are available:
+🧩 Technologies Used
+React – JavaScript library for building user interfaces.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Material UI (MUI) – UI framework for React components.
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Vite – Fast development build tool.
