@@ -2,7 +2,7 @@ import React from 'react';
 import { Box, Typography, Container, Paper } from '@mui/material';
 import { styled } from '@mui/material/styles';
 
-// Import your images
+// Importing  images
 import vectorHelp from '../assets/vectorhelp.png';
 import leadswapLogo from '../assets/leadswap.png';
 import arrowlogo from '../assets/arrow.png';
