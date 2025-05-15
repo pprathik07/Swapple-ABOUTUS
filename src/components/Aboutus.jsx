@@ -2,13 +2,13 @@ import React from 'react';
 import { Box, Typography, Container, Paper } from '@mui/material';
 import { styled } from '@mui/material/styles';
 
-// Importing  images
+// Grab the images
 import vectorHelp from '../assets/vectorhelp.png';
 import leadswapLogo from '../assets/leadswap.png';
 import arrowlogo from '../assets/arrow.png';
 
-// Styled components
-const PageWrapper = styled(Box)(({ theme }) => ({
+// Styled stuff
+const MainWrapper = styled(Box)(({ theme }) => ({
   backgroundColor: '#f9f5f2',
   minHeight: '100vh',
   position: 'relative',
@@ -17,7 +17,8 @@ const PageWrapper = styled(Box)(({ theme }) => ({
   paddingBottom: theme.spacing(5)
 }));
 
-const VerticalText = styled(Box)(({ theme }) => ({
+// That vertical text on the side
+const SideText = styled(Box)(({ theme }) => ({
   position: 'fixed',
   right: 0,
   top: 0,
@@ -29,7 +30,7 @@ const VerticalText = styled(Box)(({ theme }) => ({
   zIndex: 0
 }));
 
-const VerticalTitle = styled(Typography)(({ theme }) => ({
+const BigSideText = styled(Typography)(({ theme }) => ({
   transform: 'rotate(-90deg)',
   transformOrigin: 'center',
   whiteSpace: 'nowrap',
@@ -45,10 +46,11 @@ const VerticalTitle = styled(Typography)(({ theme }) => ({
   letterSpacing: '0.2em',
   width: '398px',
   height: '60px',
-  fontFamily: '"Bayon", sans-serif'
+  fontFamily: '"Bayon", sans-serif'  // We need this specific font
 }));
 
-const Header = styled(Box)(({ theme }) => ({
+// Top bar
+const TopBar = styled(Box)(({ theme }) => ({
   display: 'flex',
   justifyContent: 'space-between',
   alignItems: 'center',
@@ -60,15 +62,17 @@ const Header = styled(Box)(({ theme }) => ({
   width: '100%'
 }));
 
-const SectionTitle = styled(Typography)(({ theme }) => ({
+// Section headers
+const SectionHead = styled(Typography)(({ theme }) => ({
   fontWeight: 'bold',
   borderBottom: '1px solid #ccc',
   paddingBottom: theme.spacing(1),
   marginBottom: theme.spacing(4),
-  fontFamily: '"Bayon", sans-serif'
+  fontFamily: '"Bayon", sans-serif' // Need this font again
 }));
 
-const InfoSection = styled(Paper)(({ theme, bgColor = '#f2f2f0' }) => ({
+// Content box - reused for different sections
+const ContentBox = styled(Paper)(({ theme, bgColor = '#f2f2f0' }) => ({
   borderRadius: '16px',
   backgroundColor: bgColor,
   padding: theme.spacing(4),
@@ -76,20 +80,21 @@ const InfoSection = styled(Paper)(({ theme, bgColor = '#f2f2f0' }) => ({
   position: 'relative',
   border: 'none',
   maxWidth: '100%',
-  boxShadow: 'none'
+  boxShadow: 'none' 
 }));
 
+// Main component
 const AboutUs = () => {
   return (
-    <PageWrapper>
-      {/* Side vertical text with gradient */}
-      <VerticalText>
-        <VerticalTitle>ABOUTUS</VerticalTitle>
-      </VerticalText>
+    <MainWrapper>
+      {/* That vertical text thing on the side */}
+      <SideText>
+        <BigSideText>ABOUTUS</BigSideText>
+      </SideText>
 
       <Container maxWidth="md" sx={{ pr: 6, position: 'relative', zIndex: 1 }}>
-        {/* Header */}
-        <Header>
+        {/* Header at top */}
+        <TopBar>
           <Typography variant="h4" component="h1" sx={{ fontWeight: 'bold', color: '#333', fontSize: '2.2rem' }}>
             About us
           </Typography>
@@ -101,11 +106,11 @@ const AboutUs = () => {
               BUSINESS
             </Typography>
           </Box>
-        </Header>
+        </TopBar>
 
-        {/* Mission Section */}
-        <InfoSection>
-          <SectionTitle variant="subtitle1">OUR MISSION</SectionTitle>
+        {/* Mission stuff */}
+        <ContentBox>
+          <SectionHead variant="subtitle1">OUR MISSION</SectionHead>
           <Box sx={{
             display: 'flex',
             alignItems: 'flex-start',
@@ -113,7 +118,7 @@ const AboutUs = () => {
             flexDirection: { xs: 'column', sm: 'row' },
             gap: 2
           }}>
-            <Typography
+                          <Typography
               variant="body1"
               sx={{
                 flex: 1,
@@ -127,7 +132,7 @@ const AboutUs = () => {
               To empower businesses with AI-driven lead generation tools that are simple to use, consistently reliable, and built for real-world results—no fluff, no outdated databases, and no empty promises.
             </Typography>
 
-            {/* Arrow icon */}
+            {/* Arrow thingy */}
             <Box sx={{
               position: { xs: 'relative', sm: 'absolute' },
               right: 30,
@@ -140,11 +145,11 @@ const AboutUs = () => {
               <img src={arrowlogo} alt="Target" style={{ width: '60px', height: 'auto' }} />
             </Box>
           </Box>
-        </InfoSection>
+        </ContentBox>
 
-        {/* Who We Help Section */}
-        <InfoSection bgColor="#fff">
-          <SectionTitle variant="subtitle1">WHO WE HELP</SectionTitle>
+        {/* Who We Help */}
+        <ContentBox bgColor="#fff">
+          <SectionHead variant="subtitle1">WHO WE HELP</SectionHead>
 
           <Box sx={{ display: 'flex', flexDirection: { xs: 'column', sm: 'row' }, alignItems: 'flex-start' }}>
             <Box sx={{
@@ -178,11 +183,11 @@ const AboutUs = () => {
               </Typography>
             </Box>
           </Box>
-        </InfoSection>
+        </ContentBox>
 
-        {/* Why LeadSwap AI Section */}
-        <InfoSection>
-          <SectionTitle variant="subtitle1">WHY LEADSWAP AI?</SectionTitle>
+        {/* Why LeadSwap */}
+        <ContentBox>
+          <SectionHead variant="subtitle1">WHY LEADSWAP AI?</SectionHead>
 
           <Box sx={{ display: 'flex', flexDirection: { xs: 'column', sm: 'row' } }}>
             <Box sx={{ flexGrow: 1 }}>
@@ -213,9 +218,9 @@ const AboutUs = () => {
               <img src={leadswapLogo} alt="LeadSwap AI Logo" style={{ width: '120px', height: 'auto' }} />
             </Box>
           </Box>
-        </InfoSection>
+        </ContentBox>
       </Container>
-    </PageWrapper>
+    </MainWrapper>
   );
 };
 
